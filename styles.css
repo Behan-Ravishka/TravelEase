@@ -20,6 +20,42 @@ nav {
   align-items: center; 
   margin-left: 120px;
 }
+
+/* Notification Center Button */
+#notification-center-btn {
+    position: relative;
+    padding: 0.5rem;
+    border-radius: 9999px;
+    background-color: transparent;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+#notification-center-btn:hover {
+    background-color: rgba(0, 123, 255, 0.1);
+}
+
+/* Notification Count */
+#notification-count {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: red;
+    color: white;
+    font-size: 0.75rem;
+    padding: 0.25rem;
+    border-radius: 50%;
+    display: none; /* Hidden until there are notifications */
+}
+
+/* Notification Dropdown Styling */
+#notification-dropdown {
+    background-color: rgba(255, 255, 255, 0.8); /* Glassmorphism effect */
+    backdrop-filter: blur(10px); /* Glassmorphism blur */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
  
 .navbar-bg {
   display: flex;

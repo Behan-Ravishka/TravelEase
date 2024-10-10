@@ -252,3 +252,47 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+document.getElementById('notification-center-btn').addEventListener('click', function() {
+  // Perform an AJAX request to fetch notifications
+  fetch('fetch_notifications.php')
+      .then(response => response.json())
+      .then(data => {
+          // Handle the received notifications
+          displayNotifications(data.notifications);
+
+          // Update notification count
+          const notificationCount = document.getElementById('notification-count');
+          if (data.unreadCount > 0) {
+              notificationCount.innerText = data.unreadCount;
+              notificationCount.style.display = 'inline-block'; // Show the count
+          } else {
+              notificationCount.style.display = 'none'; // Hide if no notifications
+          }
+      })
+      .catch(error => {
+          console.error('Error fetching notifications:', error);
+      });
+});
+
+// Function to display the notifications in the dropdown
+function displayNotifications(notifications) {
+  const notificationList = document.getElementById('notification-list');
+  notificationList.innerHTML = ''; // Clear existing notifications
+
+  if (notifications.length === 0) {
+      notificationList.innerHTML = '<p class="text-gray-600 text-center">No new notifications</p>';
+  } else {
+      notifications.forEach(notification => {
+          const notificationItem = document.createElement('div');
+          notificationItem.classList.add('notification-item', 'mb-2', 'p-2', 'bg-gray-200', 'rounded-lg', 'shadow');
+          notificationItem.innerHTML = `
+              <p>${notification.message}</p>
+              <small class="text-gray-500">${new Date(notification.created_at).toLocaleString()}</small>
+          `;
+          notificationList.appendChild(notificationItem);
+      });
+  }
+
+  // Show the dropdown
+  document.getElementById('notification-dropdown').classList.remove('hidden');
+}
