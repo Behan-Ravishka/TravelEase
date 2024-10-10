@@ -1,0 +1,689 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* reading progress bar */
+#progress-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 5px;
+  background-color: #6ac4ff;
+  z-index: 9999;
+  transition: width 0.2s ease;
+}
+
+nav {
+  display: flex;
+  justify-content: center; 
+  align-items: center; 
+  margin-left: 120px;
+}
+ 
+.navbar-bg {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  margin: auto;
+  backdrop-filter: blur(10px);
+}
+
+/* Hero section */
+#hero-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+/* Content section */
+#content-section {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #222;
+}
+
+.hover-effect:hover {
+  background: linear-gradient(90deg, #4ade80, #f472b6);
+  transition: 0.8s;
+}
+
+.hero-bg {
+  background: url('Images/3.jpg') center/cover no-repeat;
+  position: ralative;
+  
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+.hover-btn:hover {
+  background: linear-gradient(90deg, #f59e0b, #ec4899); 
+  transition: 0.1s ease-in-out;
+}
+
+.hover-btn:hover .icon {
+  transform: rotate(90deg); 
+  transition: 0.1s ease-in-out;
+}
+.flx-embed {
+  margin-top: 1.5rem; /* Adjust the margin as needed */
+}
+
+.search-bar {
+  position: relative; 
+  background-color: #1f2937; 
+  background: url('Images/world map texture image.jpg') center/cover no-repeat;
+  padding: 10rem;
+  border-radius: 5rem;
+  box-shadow: 0 8px 40px rgba(151, 150, 150, 0.6);
+  z-index: 1;
+}
+
+.search-bar::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); 
+  border-radius: 5rem; 
+  z-index: -1; 
+}
+
+.search-input, .number-input {
+  background-color: rgba(156, 147, 147, 0.5); 
+  border: none;
+  color: #ffffff;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.8s ease, width 0.8s ease; 
+  width: 100%; 
+  max-width: 200px;
+}
+
+.search-input-wrapper, .number-input-wrapper {
+  flex: 10; 
+  margin-right: 3rem;
+}
+
+
+.search-input:focus, .number-input:focus {
+  outline: none;
+  background-color: #374151;
+  width: 400px; 
+}
+
+.search-btn {
+  background: linear-gradient(90deg, #3b82f6, #06b6d4); 
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  transition: background-color 0.8s ease;
+}
+
+.search-btn:hover {
+  background: linear-gradient(90deg, #ec4899, #f59e0b); 
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(25px);
+  border: 1px solid rgba(70, 66, 66, 0.2);
+}
+
+.card {
+  background-color: #1f2937; 
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+  transition: transform 0.3s ease;
+}
+
+.card-image {
+  height: 250px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+}
+
+.card-description {
+  color: #9ca3af;
+  margin-top: 0.5rem;
+}
+
+.explore-btn {
+  background-color: #3b82f6;
+  padding: 0.2rem 1rem;
+  color: white;
+  border-radius: 1rem;
+  margin-top: 5rem;
+  transition: background-color 0.8s ease;
+}
+
+.explore-btn:hover {
+  background-color: #f59e0b; 
+}
+
+/* Why Choose Us section */
+.feature-card {
+  background-color: #1f2937; 
+  border-radius: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); 
+}
+
+.feature-icon {
+  background-color: #111827; 
+  padding: 1rem;
+  border-radius: 50%;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.feature-title {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.feature-description {
+  color: #9ca3af; 
+  margin-bottom: 1rem;
+}
+
+.learn-more-btn {
+  background-color: #3b82f6;
+  padding: 0.5rem 1rem;
+  color: white;
+  border-radius: 0.5rem;
+  transition: background-color 0.8s ease;
+}
+
+.learn-more-btn:hover {
+  background-color: #f59e0b; 
+}
+
+/* Exclusive Deals banner */
+.exclusive-banner {
+  background: url('Images/1711936612594.jpeg') center/cover no-repeat;
+  background-color: #111827; 
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  padding: 5rem;
+  border-radius: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Overlay */
+.exclusive-banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4); /* Overlay color */
+  z-index: 1;
+}
+
+/* Content on top of overlay */
+.exclusive-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Exclusive title */
+.exclusive-title {
+  font-size: 3rem;
+  font-weight: 700;
+  color: rgb(255, 255, 255); /* Change title color to stand out against overlay */
+  margin-bottom: 1rem;
+}
+
+/* Exclusive subtitle */
+.exclusive-subtitle {
+  font-size: 1.25rem;
+  color: #ffffff;
+  margin-bottom: 2rem;
+}
+
+/* Explore Deals button */
+.explore-deals-btn {
+  background-color: #3b82f6;
+  padding: 1rem 2rem;
+  color: white;
+  border-radius: 0.5rem;
+  font-size: 1.25rem;
+  transition: background-color 0.8s ease;
+  z-index: 2; /* Ensure the button stays above the overlay */
+}
+
+.explore-deals-btn:hover {
+  background-color: #f59e0b; 
+}
+
+
+/* Testimonial Carousel */
+.carousel-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+  background-color: #1f2937; 
+}
+
+.carousel-wrapper {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.testimonial {
+  min-width: 100%;
+  padding: 2rem;
+  color: white;
+  text-align: center;
+}
+
+.customer-name {
+  font-weight: bold;
+  margin-top: 1rem;
+  color: #3b82f6;
+}
+
+.nav-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  padding: 1rem;
+  cursor: pointer;
+  transition: background-color 2s ease;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.nav-button:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.prev-button {
+  left: 1rem;
+}
+
+.next-button {
+  right: 1rem;
+}
+
+
+#icon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 20vh;
+  background-color: #111827;
+}
+
+#icon{
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+#icon li a{
+  font-size: 50px;
+  height: 70px;
+  width: 70px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10%;
+  color: #493b81;
+  position: relative;
+  transition: 0.5s ease;
+}
+
+#icon li a:hover{
+  color: #21ebff;
+  font-size: 35px;
+  box-shadow: 0 0 40px #21ebff;
+}
+
+/* Gallery container */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: transparent; /* No white background */
+}
+
+.photo-gallery {
+  text-align: center;
+  padding: 20px;
+}
+
+.photo-gallery h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.subtitle {
+  color: #777;
+  margin-bottom: 20px;
+  font-size: 1em;
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px; /* Reduced the gap between photos */
+  justify-items: center;
+  max-width: 900px; /* Set a maximum width to make the gallery smaller */
+  margin: 0 auto; /* Center the gallery */
+}
+
+.photo {
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+/* Specific dimensions for each image */
+.photo:nth-child(1) {
+  grid-column: span 1;
+  grid-row: span 2;
+  width: 280px;  /* Reduced width */
+  height: 380px; /* Reduced height */
+}
+
+.photo:nth-child(2) {
+  grid-column: span 2;
+  grid-row: span 1;
+  width: 580px;  /* Reduced width */
+  height: 180px; /* Reduced height */
+}
+
+.photo:nth-child(3) {
+  grid-column: span 1;
+  grid-row: span 2;
+  width: 280px;  /* Reduced width */
+  height: 380px; /* Reduced height */
+}
+
+.photo:nth-child(4) {
+  grid-column: span 1;
+  grid-row: span 1;
+  width: 280px;  /* Reduced width */
+  height: 180px; /* Reduced height */
+}
+
+.photo:nth-child(5) {
+  grid-column: span 1;
+  grid-row: span 1;
+  width: 280px;  /* Reduced width */
+  height: 180px; /* Reduced height */
+}
+
+.photo:nth-child(6) {
+  grid-column: span 1;
+  grid-row: span 1;
+  width: 280px;  /* Reduced width */
+  height: 180px; /* Reduced height */
+}
+
+/* Add responsive design */
+@media (max-width: 768px) {
+  .gallery {
+      grid-template-columns: 1fr;
+      grid-template-rows: none;
+  }
+
+  .photo:nth-child(1),
+  .photo:nth-child(3) {
+      width: 100%; /* Make full-width for smaller screens */
+      height: auto;
+    }
+}
+
+/* Blog Section Styles */
+.blog-card-section {
+  text-align: center;
+  padding: 50px 0;
+}
+
+.blog-title {
+  font-size: 36px;
+  margin-bottom: 20px;
+}
+
+/* Card Container */
+.blog-card-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+/* Individual Blog Card */
+.blog-card {
+  background-color:  #1f2937; /* Dark background */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  width: 300px;
+  transition: transform 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px); /* Lift the card on hover */
+}
+
+.blog-card-image {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+/* Card Content */
+.blog-card-content {
+  padding: 15px;
+}
+
+
+.blog-card-text {
+  font-size: 16px;
+  color: #bbbbbb; /* Lighter text color */
+  margin-bottom: 15px;
+}
+
+/* Read More Button */
+.blog-read-more {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007BFF; /* Blue button */
+  color: white; /* White text */
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.blog-read-more:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Read More Button */
+.blog-read-more {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #007BFF; /* Blue button */
+  color: white; /* White text */
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.blog-read-more:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+:root {
+  --button-bg-color: rgba(28, 37, 65, 0.8);
+  --button-hover-color: #00aaff;
+  --button-text-color: #ffffff;
+  --button-hover-text-color: #ffffff;
+  --button-hover-shadow: 0px 0px 20px rgba(0, 170, 255, 0.5);
+  --button-border-radius: 50px;
+  --button-padding: 14px 24px;
+}
+
+/* Button Styling */
+.global-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--button-padding);
+  background: var(--button-bg-color);
+  color: var(--button-text-color);
+  border: none;
+  border-radius: var(--button-border-radius);
+  cursor: pointer;
+  position: fixed; /* Ensures the button stays in place */
+  right: 20px; /* Adjust this value to place the button where you want */
+  bottom: 20px; /* Adjust this value to place the button where you want */
+  z-index: 1000; /* Ensures it stays on top of most elements */
+  transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
+  gap: 10px; /* Ensure space between icon and text */
+}
+
+.global-button:hover {
+  background: var(--button-hover-color);
+  box-shadow: var(--button-hover-shadow);
+  transform: translateY(-3px);
+}
+
+/* Text Styling */
+.global-button .btn-text {
+  margin-right: 5px; /* Small margin to maintain space with the icon */
+  font-size: 18px;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+/* Icon Styling */
+.global-button .btn-icon {
+  transition: transform 0.3s ease;
+}
+
+.global-button:hover .btn-text {
+  transform: translateX(4px); /* Slight shift for a smooth transition */
+}
+
+.global-button:hover .btn-icon {
+  transform: translateX(3px); 
+}
+
+.global-button:focus {
+  outline: none;
+}
+
+.filter-widget {
+  position: absolute;
+  bottom: 85px;
+  right: 20px;
+  z-index: 1;
+}
+
+.filter-button {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 15px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.filter-button:hover {
+  transform: scale(1.3);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.filter-button .fas {
+  margin-right: 5px;
+}
+
+.filter-options {
+  position: absolute;
+  top: 80%;
+  left: 80%;
+  width: 200px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  display: none;
+  transition: opacity 0.3s ease;
+}
+
+.filter-widget:hover .filter-options {
+  display: block;
+  opacity: 1;
+}
+
