@@ -11,13 +11,15 @@
   <!-- Include SweetAlert CSS and JS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+<script src="//unpkg.com/alpinejs" defer></script>
+
 
   <link rel="icon" href="Images/favicon-32x32.png" type="image/png">
 </head>
 <body class="bg-gray-900 text-white">
 
   <div id="progress-bar"></div>
-  
 
   <?php
 // Start session
@@ -74,6 +76,14 @@ $isLoggedIn = isset($_SESSION['user_id']); // assuming 'user_id' is set when log
         </div>
     </div>
 </header>
+<!-- scroll to top button -->
+<button id="topButton" 
+    class="fixed bottom-20 right-10 z-50 hidden rounded-full w-16 h-16 justify-center items-center 
+    shadow-md backdrop-blur-lg bg-white bg-opacity-10 border border-white/30 hover:bg-opacity-20 
+    animate-bounce transition ease-in-out duration-300" 
+    onclick="scrollToTop()">
+    <i class="fas fa-arrow-up text-3xl text-white"></i>
+</button>
   
   <!-- Hero Section -->
 <section id="home" class="hero-bg h-screen flex items-center justify-center text-center px-4 sm:px-6 lg:px-8">
@@ -467,44 +477,110 @@ $isLoggedIn = isset($_SESSION['user_id']); // assuming 'user_id' is set when log
     </div>
 </section>
 
-  <!-- Footer Section -->
-  <footer id="contact" class="footer text-center">
-    <div class="container mx-auto px-6">
-      <h3 class="text-2xl font-bold mb-4">Get in Touch with Us</h3>
-      <p class="mb-4">Sign up for our newsletter to receive the latest travel deals and updates.</p>
-      <form action="#" class="mb-4">
-        <input type="email" id="footer-subscribe" placeholder="Enter your email" class="p-2 rounded-l-md border border-gray-700 bg-gray-800 text-white" required>
-        <button type="submit" class="p-2 bg-blue-500 rounded-r-md hover:bg-blue-600">Subscribe</button>
-      </form>
-     
-      <ul id="icon">
-        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>&emsp;
-        <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>&emsp;
-        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>&emsp;
-        <li><a href="#"><ion-icon name="logo-whatsapp"></ion-icon></a></li>&emsp;
-        <li><a href="#"><ion-icon name="logo-youtube"></ion-icon></a></li>
-      </ul> 
-
-      <div class="mt-4">
-        <a href="#" class="mr-4">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+<!-- Meet Our Team Section -->
+<section id="team" class="py-12 bg-gray-900 text-white">
+  <div class="container mx-auto px-6 text-center">
+    <h2 class="text-3xl font-bold mb-8">Meet the <span class="text-blue-500">Team</span></h2>
+    
+    <div class="flex justify-center space-x-8">
+      <!-- Team Member 1 -->
+      <div class="max-w-xs glass p-6 rounded-lg shadow-lg">
+        <img src="Images/sadeep.jpg" alt="sadeep" class="rounded-full w-24 mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-2">Sadeep</h3>
+        <p class="text-blue-400">Web Designer</p>
+        <div class="flex justify-center space-x-4 mt-4">
+          <a href="#" class="text-blue-500 hover:text-blue-600"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="#" class="text-blue-500 hover:text-blue-600"><ion-icon name="logo-twitter"></ion-icon></a>
+          <a href="#" class="text-blue-500 hover:text-blue-600"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </div>
       </div>
-      <p class="mt-4">© 2024 TravelEase. All rights reserved.</p>
+
+      <!-- Team Member 2 -->
+      <div class="max-w-xs glass p-6 rounded-lg shadow-lg">
+        <img src="Images/behan.jpg" alt="behan" class="rounded-full w-24 mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-2">Behan</h3>
+        <p class="text-blue-400">Web Designer</p>
+        <div class="flex justify-center space-x-4 mt-4">
+          <a href="#" class="text-blue-500 hover:text-blue-600"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="#" class="text-blue-500 hover:text-blue-600"><ion-icon name="logo-twitter"></ion-icon></a>
+          <a href="#" class="text-blue-500 hover:text-blue-600"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </div>
+      </div>
+
+      <!-- Team Member 3 -->
+      <div class="max-w-xs glass p-6 rounded-lg shadow-lg">
+        <img src="Images/venuri.jpg" alt="venuri" class="rounded-full w-24 mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-2">Venuri</h3>
+        <p class="text-blue-400">Web Designer</p>
+        <div class="flex justify-center space-x-4 mt-4">
+          <a href="#" class="text-blue-500 hover:text-blue-600"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="#" class="text-blue-500 hover:text-blue-600"><ion-icon name="logo-instagram"></ion-icon></a>
+          <a href="#" class="text-blue-500 hover:text-blue-600"><ion-icon name="logo-dribbble"></ion-icon></a>
+        </div>
+      </div>
+
+      <!-- Team Member 4 -->
+      <div class="max-w-xs glass p-6 rounded-lg shadow-lg">
+        <img src="Images/sanuvi.jpg" alt="sanuvi" class="rounded-full w-24 mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-2">Sanuvi</h3>
+        <p class="text-blue-400">Web Designer</p>
+        <div class="flex justify-center space-x-4 mt-4">
+          <a href="#" class="text-blue-500 hover:text-blue-600"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="#" class="text-blue-500 hover:text-blue-600"><ion-icon name="logo-twitter"></ion-icon></a>
+          <a href="#" class="text-blue-500 hover:text-blue-600"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </div>
+      </div>
+
     </div>
-    <!-- Global Subscribe Button -->
-    <button class="global-button" type="button" onclick="scrollToEmail()">
-      <span class="btn-text">Subscribe</span>
-      <svg class="btn-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M21.75 1.5H2.25c-.828 0-1.5.672-1.5 1.5v12c0 .828.672 1.5 1.5 1.5h19.5c.828 0 1.5-.672 1.5-1.5V3c0-.828-.672-1.5-1.5-1.5zM15.687 6.975L19.5 10.5M8.313 6.975L4.5 10.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-        <path d="M22.88 2.014l-9.513 6.56C12.965 8.851 12.488 9 12 9s-.965-.149-1.367-.426L1.12 2.014" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
-      </svg>
-    </button>
-  </footer>
+  </div>
+</section>
+
+
+  <!-- Footer Section -->
+<footer id="contact" class="footer text-center bg-gray-900 text-white py-8">
+  <div class="container mx-auto px-6">
+    <h3 class="text-2xl font-bold mb-4">Get in Touch with Us</h3>
+    <p class="mb-4">Sign up for our newsletter to receive the latest travel deals and updates.</p>
+    
+    <!-- Subscription Form -->
+    <form id="subscribeForm" action="#" method="POST" class="mb-4 flex justify-center items-center">
+      <input type="email" id="footer-subscribe" name="email" placeholder="Enter your email" class="p-2 rounded-l-md border border-gray-700 bg-gray-800 text-white focus:outline-none focus:ring-2 focus:ring-blue-500" required>
+      <button type="submit" class="p-2 bg-blue-500 rounded-r-md hover:bg-blue-600 transition duration-200">Subscribe</button>
+    </form>
+    
+    <!-- Social Media Icons -->
+    <ul id="icon" class="flex justify-center mb-4 space-x-4">
+      <li><a href="#" class="hover:text-blue-400"><ion-icon name="logo-facebook"></ion-icon></a></li>
+      <li><a href="#" class="hover:text-blue-400"><ion-icon name="logo-twitter"></ion-icon></a></li>
+      <li><a href="#" class="hover:text-blue-400"><ion-icon name="logo-instagram"></ion-icon></a></li>
+      <li><a href="#" class="hover:text-blue-400"><ion-icon name="logo-whatsapp"></ion-icon></a></li>
+      <li><a href="#" class="hover:text-blue-400"><ion-icon name="logo-youtube"></ion-icon></a></li>
+    </ul>
+
+    <div class="mt-4">
+      <a href="#" class="mr-4 hover:text-blue-400">Privacy Policy</a>
+      <a href="#" class="hover:text-blue-400">Terms of Service</a>
+    </div>
+
+    <p class="mt-4">© 2024 TravelEase. All rights reserved.</p>
+  </div>
+  
+  <!-- Global Subscribe Button -->
+  <button class="global-button bg-blue-500 text-white p-2 rounded mt-4 hover:bg-blue-600 transition duration-200" type="button" onclick="scrollToEmail()">
+    <span class="btn-text">Subscribe</span>
+    <svg class="btn-icon inline-block ml-2" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M21.75 1.5H2.25c-.828 0-1.5.672-1.5 1.5v12c0 .828.672 1.5 1.5 1.5h19.5c.828 0 1.5-.672 1.5-1.5V3c0-.828-.672-1.5-1.5-1.5zM15.687 6.975L19.5 10.5M8.313 6.975L4.5 10.5" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      <path d="M22.88 2.014l-9.513 6.56C12.965 8.851 12.488 9 12 9s-.965-.149-1.367-.426L1.12 2.014" stroke="#fff" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+    </svg>
+  </button>
+</footer>
 
   <script src="main.js" defer></script>
   <script src="likebtn.js" defer></script>
+  <script src="topbtn.js" defer></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/alpinejs" defer></script>
 </body>
 </html>
 

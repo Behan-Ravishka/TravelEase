@@ -133,7 +133,6 @@ function scrollToEmail() {
   }
 }
 
-
 // Search functionality
 document.getElementById('searchForm').addEventListener('submit', function(e) {
   e.preventDefault(); // Prevent the default form submission
@@ -210,17 +209,17 @@ document.addEventListener("DOMContentLoaded", function () {
       }
   });
 
-  // Login button click event
+  // Login button click 
   loginBtn.addEventListener('click', function () {
-      isLoggedIn = true;  // Simulating user login
+      isLoggedIn = true;  
       loginBtn.classList.add('hidden');
       logoutBtn.classList.remove('hidden');
       showNotification('You are logged in successfully!');
   });
 
-  // Logout button click event
+  // Logout button click 
   logoutBtn.addEventListener('click', function () {
-      isLoggedIn = false;  // Simulating user logout
+      isLoggedIn = false;  
       loginBtn.classList.remove('hidden');
       logoutBtn.classList.add('hidden');
       showNotification('You are logged out successfully!');
@@ -231,7 +230,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   function checkEmailSubscription(email) {
-      const existingEmail = "example@email.com"; // Example of an already subscribed email
+      const existingEmail = "example@email.com"; 
       
       if (email === existingEmail) {
           showNotification('Check your email.');
@@ -255,7 +254,7 @@ document.addEventListener("DOMContentLoaded", function () {
 document.addEventListener("DOMContentLoaded", function() {
   // Get all the like buttons
   const likeButtons = document.querySelectorAll('.like-btn');
-  const likeSound = document.getElementById('like-sound'); // Reference to the sound element
+  const likeSound = document.getElementById('like-sound');
 
   likeButtons.forEach(button => {
       button.addEventListener('click', function() {
@@ -263,7 +262,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
           // Play the pop sound on click
           if (likeSound) {
-              likeSound.currentTime = 0;  // Reset sound to the start
+              likeSound.currentTime = 0;  
               likeSound.play().catch(error => {
                   console.log('Error playing sound:', error);
               });
@@ -271,18 +270,16 @@ document.addEventListener("DOMContentLoaded", function() {
 
           // Toggle the "liked" state
           if (heartIcon.classList.contains('liked')) {
-              heartIcon.setAttribute('name', 'heart-outline'); // Change to unfilled heart
+              heartIcon.setAttribute('name', 'heart-outline'); 
               heartIcon.classList.remove('liked');
-              button.style.backgroundColor = 'rgba(255, 255, 255, 0.2)'; // Reset background color
+              button.style.backgroundColor = 'rgba(255, 255, 255, 0.2)'; 
           } else {
-              heartIcon.setAttribute('name', 'heart'); // Change to filled heart
+              heartIcon.setAttribute('name', 'heart'); 
               heartIcon.classList.add('liked');
-              button.style.backgroundColor = '#ff0000'; // Change background to red when liked
+              button.style.backgroundColor = '#ff0000'; 
           }
       });
   });
 });
-
-
 
 

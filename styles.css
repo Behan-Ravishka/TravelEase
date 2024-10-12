@@ -143,7 +143,7 @@ nav {
   background: linear-gradient(90deg, #ec4899, #f59e0b); 
 }
 
-.glass-card {
+-card {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 20px;
   backdrop-filter: blur(25px);
@@ -432,7 +432,7 @@ nav {
 
 body {
   font-family: Arial, sans-serif;
-  background-color: transparent; /* No white background */
+  background-color: transparent; 
 }
 
 .photo-gallery {
@@ -454,10 +454,10 @@ body {
 .gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 15px; /* Reduced the gap between photos */
+  gap: 15px; 
   justify-items: center;
-  max-width: 900px; /* Set a maximum width to make the gallery smaller */
-  margin: 0 auto; /* Center the gallery */
+  max-width: 900px; 
+  margin: 0 auto; 
 }
 
 .photo {
@@ -473,47 +473,47 @@ body {
   border-radius: 10px;
 }
 
-/* Specific dimensions for each image */
+/* dimensions for each image */
 .photo:nth-child(1) {
   grid-column: span 1;
   grid-row: span 2;
-  width: 280px;  /* Reduced width */
-  height: 380px; /* Reduced height */
+  width: 280px;  
+  height: 380px;
 }
 
 .photo:nth-child(2) {
   grid-column: span 2;
   grid-row: span 1;
-  width: 580px;  /* Reduced width */
-  height: 180px; /* Reduced height */
+  width: 580px;  
+  height: 180px; 
 }
 
 .photo:nth-child(3) {
   grid-column: span 1;
   grid-row: span 2;
-  width: 280px;  /* Reduced width */
-  height: 380px; /* Reduced height */
+  width: 280px;  
+  height: 380px; 
 }
 
 .photo:nth-child(4) {
   grid-column: span 1;
   grid-row: span 1;
-  width: 280px;  /* Reduced width */
-  height: 180px; /* Reduced height */
+  width: 280px;  
+  height: 180px; 
 }
 
 .photo:nth-child(5) {
   grid-column: span 1;
   grid-row: span 1;
-  width: 280px;  /* Reduced width */
-  height: 180px; /* Reduced height */
+  width: 280px;  
+  height: 180px;
 }
 
 .photo:nth-child(6) {
   grid-column: span 1;
   grid-row: span 1;
-  width: 280px;  /* Reduced width */
-  height: 180px; /* Reduced height */
+  width: 280px;  
+  height: 180px; 
 }
 
 /* Add responsive design */
@@ -525,7 +525,7 @@ body {
 
   .photo:nth-child(1),
   .photo:nth-child(3) {
-      width: 100%; /* Make full-width for smaller screens */
+      width: 100%;
       height: auto;
     }
 }
@@ -551,7 +551,7 @@ body {
 
 /* Individual Blog Card */
 .blog-card {
-  background-color:  #1f2937; /* Dark background */
+  background-color:  #1f2937;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   overflow: hidden;
@@ -560,7 +560,7 @@ body {
 }
 
 .blog-card:hover {
-  transform: translateY(-5px); /* Lift the card on hover */
+  transform: translateY(-5px); 
 }
 
 .blog-card-image {
@@ -577,7 +577,7 @@ body {
 
 .blog-card-text {
   font-size: 16px;
-  color: #bbbbbb; /* Lighter text color */
+  color: #bbbbbb;
   margin-bottom: 15px;
 }
 
@@ -585,8 +585,8 @@ body {
 .blog-read-more {
   display: inline-block;
   padding: 8px 16px;
-  background-color: #007BFF; /* Blue button */
-  color: white; /* White text */
+  background-color: #007BFF;  
+  color: white; 
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
@@ -594,15 +594,15 @@ body {
 }
 
 .blog-read-more:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3; 
 }
 
 /* Read More Button */
 .blog-read-more {
   display: inline-block;
   padding: 8px 16px;
-  background-color: #007BFF; /* Blue button */
-  color: white; /* White text */
+  background-color: #007BFF; 
+  color: white;
   border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
@@ -610,7 +610,7 @@ body {
 }
 
 .blog-read-more:hover {
-  background-color: #0056b3; /* Darker blue on hover */
+  background-color: #0056b3; 
 }
 
 :root {
@@ -634,12 +634,12 @@ body {
   border: none;
   border-radius: var(--button-border-radius);
   cursor: pointer;
-  position: fixed; /* Ensures the button stays in place */
-  right: 20px; /* Adjust this value to place the button where you want */
-  bottom: 20px; /* Adjust this value to place the button where you want */
-  z-index: 1000; /* Ensures it stays on top of most elements */
+  position: fixed;
+  right: 20px; 
+  bottom: 20px; 
+  z-index: 1000; 
   transition: background 0.3s ease, box-shadow 0.3s ease, transform 0.2s ease;
-  gap: 10px; /* Ensure space between icon and text */
+  gap: 10px; 
 }
 
 .global-button:hover {
@@ -650,7 +650,7 @@ body {
 
 /* Text Styling */
 .global-button .btn-text {
-  margin-right: 5px; /* Small margin to maintain space with the icon */
+  margin-right: 5px; 
   font-size: 18px;
   font-weight: bold;
   transition: transform 0.3s ease;
@@ -662,7 +662,7 @@ body {
 }
 
 .global-button:hover .btn-text {
-  transform: translateX(4px); /* Slight shift for a smooth transition */
+  transform: translateX(4px);
 }
 
 .global-button:hover .btn-icon {
@@ -714,5 +714,13 @@ body {
 .filter-widget:hover .filter-options {
   display: block;
   opacity: 1;
+}
+
+/* Glassmorphism Effect */
+.glass {
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
 }
 
