@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="likebtn.css">
   <!-- Include SweetAlert CSS and JS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.min.js"></script>
@@ -201,6 +202,9 @@ $isLoggedIn = isset($_SESSION['user_id']); // assuming 'user_id' is set when log
         <!-- Card 1 -->
         <div class="card">
           <img src="Images/Paris,France.jpg" alt="Paris" class="card-image">
+          <button class="like-btn relative hover:scale-110 transition-transform duration-300 ease-in-out">
+          <ion-icon name="heart-outline" class="heart-icon text-3xl"></ion-icon>
+          </button>
           <div class="card-content">
             <h3 class="card-title">Paris, France</h3>
             <p class="card-description">Explore the city of love, famous for its art, culture, and Eiffel Tower.</p>
@@ -211,6 +215,9 @@ $isLoggedIn = isset($_SESSION['user_id']); // assuming 'user_id' is set when log
         <!-- Card 2 -->
         <div class="card">
           <img src="Images/Tokyo, Japan.jpg" alt="Tokyo" class="card-image">
+          <button class="like-btn relative hover:scale-110 transition-transform duration-300 ease-in-out">
+          <ion-icon name="heart-outline" class="heart-icon text-3xl"></ion-icon>
+          </button>
           <div class="card-content">
             <h3 class="card-title">Tokyo, Japan</h3>
             <p class="card-description">Discover the vibrant city with a blend of traditional and modern culture.</p>
@@ -221,6 +228,9 @@ $isLoggedIn = isset($_SESSION['user_id']); // assuming 'user_id' is set when log
         <!-- Card 3 -->
         <div class="card">
           <img src="Images/New York, USA.jpg" alt="New York" class="card-image">
+          <button class="like-btn relative hover:scale-110 transition-transform duration-300 ease-in-out">
+          <ion-icon name="heart-outline" class="heart-icon text-3xl"></ion-icon>
+          </button>
           <div class="card-content">
             <h3 class="card-title">New York, USA</h3>
             <p class="card-description">Experience the energy of the Big Apple with iconic landmarks.</p>
@@ -231,6 +241,9 @@ $isLoggedIn = isset($_SESSION['user_id']); // assuming 'user_id' is set when log
         <!-- Card 4 -->
         <div class="card">
           <img src="Images/Sydney, Australia.jpeg" alt="Sydney" class="card-image">
+          <button class="like-btn relative hover:scale-110 transition-transform duration-300 ease-in-out">
+          <ion-icon name="heart-outline" class="heart-icon text-3xl"></ion-icon>
+          </button>
           <div class="card-content">
             <h3 class="card-title">Sydney, Australia</h3>
             <p class="card-description">Visit the stunning harbor city known for its opera house and beaches.</p>
@@ -241,6 +254,9 @@ $isLoggedIn = isset($_SESSION['user_id']); // assuming 'user_id' is set when log
         <!-- Card 5 -->
         <div class="card">
           <img src="Images/Cape Town, South Africa.jpg" alt="Cape Town" class="card-image">
+          <button class="like-btn relative hover:scale-110 transition-transform duration-300 ease-in-out">
+          <ion-icon name="heart-outline" class="heart-icon text-3xl"></ion-icon>
+          </button>
           <div class="card-content">
             <h3 class="card-title">Cape Town, South Africa</h3>
             <p class="card-description">Discover breathtaking landscapes and rich cultural history.</p>
@@ -251,6 +267,9 @@ $isLoggedIn = isset($_SESSION['user_id']); // assuming 'user_id' is set when log
         <!-- Card 6 -->
         <div class="card">
           <img src="Images/Dubai, UAE.jpg" alt="Dubai" class="card-image">
+          <button class="like-btn relative hover:scale-110 transition-transform duration-300 ease-in-out">
+          <ion-icon name="heart-outline" class="heart-icon text-3xl"></ion-icon>
+          </button>
           <div class="card-content">
             <h3 class="card-title">Dubai, UAE</h3>
             <p class="card-description">Enjoy the luxury and futuristic architecture of this desert metropolis.</p>
@@ -261,6 +280,7 @@ $isLoggedIn = isset($_SESSION['user_id']); // assuming 'user_id' is set when log
       </div>
     </div>
   </section>
+  <audio id="like-sound" src="sound/likesound.mp3" preload="auto"></audio>
   
   <!-- Why Choose Us Section -->
   <section class="py-20">
@@ -481,6 +501,7 @@ $isLoggedIn = isset($_SESSION['user_id']); // assuming 'user_id' is set when log
   </footer>
 
   <script src="main.js" defer></script>
+  <script src="likebtn.js" defer></script>
   <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
 </body>

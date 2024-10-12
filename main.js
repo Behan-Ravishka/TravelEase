@@ -252,6 +252,36 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+  // Get all the like buttons
+  const likeButtons = document.querySelectorAll('.like-btn');
+  const likeSound = document.getElementById('like-sound'); // Reference to the sound element
+
+  likeButtons.forEach(button => {
+      button.addEventListener('click', function() {
+          const heartIcon = button.querySelector('.heart-icon');
+
+          // Play the pop sound on click
+          if (likeSound) {
+              likeSound.currentTime = 0;  // Reset sound to the start
+              likeSound.play().catch(error => {
+                  console.log('Error playing sound:', error);
+              });
+          }
+
+          // Toggle the "liked" state
+          if (heartIcon.classList.contains('liked')) {
+              heartIcon.setAttribute('name', 'heart-outline'); // Change to unfilled heart
+              heartIcon.classList.remove('liked');
+              button.style.backgroundColor = 'rgba(255, 255, 255, 0.2)'; // Reset background color
+          } else {
+              heartIcon.setAttribute('name', 'heart'); // Change to filled heart
+              heartIcon.classList.add('liked');
+              button.style.backgroundColor = '#ff0000'; // Change background to red when liked
+          }
+      });
+  });
+});
 
 
 
