@@ -17,6 +17,7 @@
 <body class="bg-gray-900 text-white">
 
   <div id="progress-bar"></div>
+  
 
   <?php
 // Start session
