@@ -190,47 +190,45 @@ $conn->close();
             width: 100%;
             border-radius: 12p
             overflow: hidde
-            -shadow: 0 4px 30px rgba(0, 0, 0, 0.1
-            backdrop-filter: blur(5px
-            background: rgba(255, 255, 255, 0.1
-}
+            -shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
+            background: rgba(255, 255, 255, 0.1);
+        }
 
-table td, table th {
-    border: 1px solid rgba(255, 255, 255, 0.2)
-    padding: 12px 20px;
-    backdrop-filter: blur(5px)
-    color: white;
-}
+        table td, table th {
+            border: 1px solid rgba(255, 255, 255, 0.2)
+            padding: 12px 20px;
+            backdrop-filter: blur(5px)
+            color: white;
+        }
 
-/* Header styling */
-table th {
-    background-color: rgba(28, 37, 65, 0.8)
-    color: white;
-}
+        /* Header styling */
+        table th {
+            background-color: rgba(28, 37, 65, 0.8)
+            color: white;
+        }
 
+        table td {
+            background-color: rgba(255, 255, 255, 0.05)
+            color: black;
+        }
 
-table td {
-    background-color: rgba(255, 255, 255, 0.05)
-    color: black;
-}
+        table tr:first-child th:first-child {
+            border-top-left-radius: 12px;
+        }
 
-table tr:first-child th:first-child {
-    border-top-left-radius: 12px;
-}
+        table tr:first-child th:last-child {
+            border-top-right-radius: 12px;
+        }
 
-table tr:first-child th:last-child {
-    border-top-right-radius: 12px;
-}
+        /* Rounded corners for the bottom-left and bottom-right of the table */
+        table tr:last-child td:first-child {
+            border-bottom-left-radius: 12px;
+        }
 
-/* Rounded corners for the bottom-left and bottom-right of the table */
-table tr:last-child td:first-child {
-    border-bottom-left-radius: 12px;
-}
-
-table tr:last-child td:last-child {
-    border-bottom-right-radius: 12px;
-}
-
+        table tr:last-child td:last-child {
+            border-bottom-right-radius: 12px;
+        }
     </style>
 </head>
 <body>
