@@ -20,6 +20,8 @@ $user = $result->fetch_assoc();
 // Handle form submission to update profile details
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // Get updated details from form
+    $name = isset($_POST['name']) ? trim($_POST['name']) : null;
+    $email = isset($_POST['email']) ? trim($_POST['email']) : null;
     $address = isset($_POST['address']) ? trim($_POST['address']) : null;
     $country = isset($_POST['country']) ? trim($_POST['country']) : null;
     $age = isset($_POST['age']) ? (int)$_POST['age'] : null;
@@ -28,12 +30,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $rating = isset($_POST['rating']) ? (int)$_POST['rating'] : null;
 
     // Ensure required fields are not empty
-    if ($address !== null && $country !== null && $age !== null && $gender !== null && $description !== null) {
+    if ($name !== null && $email !== null && $address !== null && $country !== null && $age !== null && $gender !== null && $description !== null) {
         // Update user details in DB
-        $query = "UPDATE users SET address = ?, country = ?, age = ?, gender = ?, description = ?, rating = ? WHERE id = ?";
+        $query = "UPDATE users SET name = ?, email = ?, address = ?, country = ?, age = ?, gender = ?, description = ?, rating = ? WHERE id = ?";
         $stmt = $conn->prepare($query);
-        $stmt->bind_param("ssisisi", $address, $country, $age, $gender, $description, $rating, $user_id);
+        $stmt->bind_param("sssssisii", $name, $email, $address, $country, $age, $gender, $description, $rating, $user_id);
         $stmt->execute();
+
+        // Notification for profile update
+        echo "<script>alert('Profile updated successfully! If you changed your account username or password, Please give the updated credentials to Login next time!');</script>";
     }
 
     // Handle profile picture update
@@ -49,9 +54,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $stmt->bind_param("si", $target_file, $user_id);
         $stmt->execute();
     }
-
-    // Notification for profile update
-    echo "<script>alert('Profile updated successfully!');</script>";
 }
 ?>
 
@@ -243,6 +245,16 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <!-- Form to Edit Profile -->
                 <form action="account.php" method="post" enctype="multipart/form-data" class="w-full">
                     <input type="file" name="profile_pic" id="profile_pic" class="hidden">
+                    <div class="mb-4">
+                        <label for="name" class="block text-white">Username:</label>
+                        <input type="text" name="name" id="name" class="w-full p-2 rounded" value="<?php echo htmlspecialchars($user['name']); ?>" required>
+                    </div>
+
+                <!-- Email Field -->
+                    <div class="mb-4">
+                        <label for="email" class="block text-white">Email:</label>
+                        <input type="email" name="email" id="email" class="w-full p-2 rounded" value="<?php echo htmlspecialchars($user['email']); ?>" required>
+                    </div>
                     <div class="mb-4">
                         <label for="address" class="block text-white">Address:</label>
                         <input type="text" name="address" id="address" class="w-full p-2 rounded" value="<?php echo htmlspecialchars($user['address']); ?>" >

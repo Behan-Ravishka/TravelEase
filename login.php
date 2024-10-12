@@ -103,7 +103,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             border: 1px solid rgba(255, 255, 255, 0.5);
             backdrop-filter: blur(8px);
             -webkit-backdrop-filter: blur(8px);
-            position: relative; /* Ensure content stays within the card */
+            position: relative; 
         }
 
         form {
