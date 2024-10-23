@@ -531,6 +531,18 @@ $isLoggedIn = isset($_SESSION['user_id']); // assuming 'user_id' is set when log
         </div>
       </div>
 
+      <!-- Team Member 5 -->
+      <div class="max-w-xs glass p-6 rounded-lg shadow-lg">
+        <img src="Images/oshala.jpg" alt="sanuvi" class="rounded-full w-24 mx-auto mb-4">
+        <h3 class="text-xl font-semibold mb-2">Oshala</h3>
+        <p class="text-blue-400">Web Designer</p>
+        <div class="flex justify-center space-x-4 mt-4">
+          <a href="#" class="text-blue-500 hover:text-blue-600"><ion-icon name="logo-facebook"></ion-icon></a>
+          <a href="#" class="text-blue-500 hover:text-blue-600"><ion-icon name="logo-twitter"></ion-icon></a>
+          <a href="#" class="text-blue-500 hover:text-blue-600"><ion-icon name="logo-linkedin"></ion-icon></a>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
