@@ -64,6 +64,13 @@
 - **Login/Signup**: Create an account or log in to manage your bookings.
 - **Subscribe**: Stay updated with the latest deals by subscribing via the email subscription form.
 
+## 👥 Team
+- M.P.B.R.Perera https://www.linkedin.com/in/behanravishkaperera
+- V.H.Hendavitharana http://www.linkedin.com/in/venurihendavitharana
+- V.D.S.Mithurnda
+- S.H.Perera
+- S.P.O.V.Karunathilaka
+
 ## Contributing 🤝
 
 We welcome contributions! Feel free to open an issue or submit a pull request if you'd like to improve the TravelEase project.
