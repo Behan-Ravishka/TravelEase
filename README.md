@@ -1,6 +1,6 @@
-# TravelEase 🌍✈️
+# TravelEase - Travel Booking System🌍✈️
 
-**TravelEase** is a modern and fully responsive travel booking website that allows users to search, book accommodations, and explore destinations around the world. The website provides real-time availability, currency conversion, and flexible payment options, making travel planning seamless. The design is visually striking with smooth transitions, interactive features, and a modern glass effect to create a unique user experience.
+**TravelEase** Built as our First-Year Mini Web Development Group Project for assignment for Web Development I Module, this is a modern and fully responsive travel booking website that allows users to search, book accommodations, and explore destinations around the world. The website provides real-time availability, currency conversion, and flexible payment options, making travel planning seamless. The design is visually striking with smooth transitions, interactive features, and a modern glass effect to create a unique user experience.
 
 ## Features ✨
 
@@ -22,6 +22,14 @@
   - Real-time database integration for accommodation availability
 - **Database**:
   - Integrated with a real-time database (e.g., MySQL) to manage booking and travel data.
+ 
+## 📁 Website Structure
+
+  - Homepage: Hero banner, testimonials, gallery, and blog
+  - Search Results: Dynamic listings based on filters
+  - Booking Page: Destination details and booking form
+  - User Dashboard: Profile info and booking management
+  - Forgot Password: Email/phone-based recovery
 
 ## Installation & Setup 🚀
 
