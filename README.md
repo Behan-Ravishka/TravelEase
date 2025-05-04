@@ -5,8 +5,6 @@
 ## Features ✨
 
 - **Real-Time Booking System**: Users can search for accommodations in different destinations and check real-time availability.
-- **Currency Conversion**: Dynamic price adjustments based on the user's selected currency.
-- **Multiple Payment Options**: Allows flexibility in payment methods for bookings.
 - **Interactive UI**: Includes smooth scrolling, colorful hover effects, transitions, notifications, and cursor effects.
 - **Global Subscribe Button**: A floating subscribe button that directs users to subscribe via email.
 - **Login/Signup System**: Integrated authentication for users to sign up or log in to manage bookings.
@@ -22,7 +20,6 @@
 - **Backend**:
   - PHP for dynamic server-side logic
   - Real-time database integration for accommodation availability
-  - Payment method integration
 - **Database**:
   - Integrated with a real-time database (e.g., MySQL) to manage booking and travel data.
 
