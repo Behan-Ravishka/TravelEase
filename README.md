@@ -81,5 +81,3 @@ We welcome contributions! Feel free to open an issue or submit a pull request if
 ### Follow TravelEase for More Travel Adventures! 🌍✈️
 
 ---
-
-This content should give you a solid starting point for your `README.md` on GitHub. Adjust the details as needed!
