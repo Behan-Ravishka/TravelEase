@@ -67,7 +67,7 @@
 ## 👥 Team
 - M.P.B.R.Perera https://www.linkedin.com/in/behanravishkaperera
 - V.H.Hendavitharana http://www.linkedin.com/in/venurihendavitharana
-- V.D.S.Mithurnda
+- V.D.S.Mithuranda
 - S.H.Perera
 - S.P.O.V.Karunathilaka
 
